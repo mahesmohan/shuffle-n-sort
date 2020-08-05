@@ -1,0 +1,71 @@
+:root {
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--bg-big-screen: #efefef;
+	--tile-bg-dark: #2f454e;
+	--tile-bg-light: #6f9bab;
+	--tile-bg: #72c3dc;
+	--tile-bg-gray: #bfbfbf;
+	--btn-bg: var(--tile-bg);
+	--btn-shadow: var(--tile-bg-dark);
+	--btn-pressed-bg: var(--tile-bg-light);
+	--text-color: #333333;
+
+	--card-size-big: 25vw;
+}
+
+* {
+	line-height: 1;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+.container {
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--bg-big-screen);
+}
+.tools {
+	float: right;
+	width: var(--card-size-big);
+}
+.grid-container {
+	display: grid;
+	width: calc(3 * var(--card-size-big));
+	grid-auto-rows: var(--card-size-big);
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 0px;
+	float: left;
+}
+.card {
+	text-align: center;
+	line-height: var(--card-size-big);
+	vertical-align: middle;
+	font-size: 90px;
+	color: var(--color-white);
+	background-color: var(--tile-bg);
+}
+.card-dark {
+	background-color: var(--tile-bg-dark);
+}
+.card-light {
+	background-color: var(--tile-bg-light);
+}
+.card-gray {
+	background-color: var(--tile-bg-gray);
+}
+.btn {
+	margin: 10px;
+	width: 180px;
+	height: 50px;
+	border: 0px;
+	outline: none;
+	border-radius: 5px;
+	background-color: var(--btn-bg);
+	color: var(--color-white);
+	box-shadow: 0px 3px 2px 0px var(--btn-shadow);
+}
+.btn:active {
+	background-color: var(--btn-pressed-bg);
+}
+@media only screen and (max-width: 375px) {
+}
