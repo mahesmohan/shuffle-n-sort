@@ -8,7 +8,22 @@
 		<title>Grid Handler</title>
 	</head>
 	<body onload="gridTools.init()">
+		<h1>Shuffle And Sort</h1>
 		<div class="container">
+			<div class="tools-small">
+				<input
+					type="button"
+					value="Shuffle"
+					class="btn btn-small"
+					onclick="gridTools.shuffle()"
+				/>
+				<input
+					type="button"
+					value="Sort"
+					class="btn btn-small"
+					onclick="gridTools.sortCards()"
+				/>
+			</div>
 			<div class="grid-container" id="grid"></div>
 			<div class="tools">
 				<input
@@ -25,5 +40,6 @@
 				/>
 			</div>
 		</div>
+		<h3>Shuffle and Sort by Mahesh Mohan</h3>
 	</body>
 </html>

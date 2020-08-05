@@ -2,16 +2,18 @@
 	--color-white: #ffffff;
 	--color-black: #000000;
 	--bg-big-screen: #efefef;
+	--bg-small-screen: #333333;
 	--tile-bg-dark: #2f454e;
 	--tile-bg-light: #6f9bab;
 	--tile-bg: #72c3dc;
 	--tile-bg-gray: #bfbfbf;
+	--tile-bg-small: var(--bg-big-screen);
 	--btn-bg: var(--tile-bg);
 	--btn-shadow: var(--tile-bg-dark);
 	--btn-pressed-bg: var(--tile-bg-light);
-	--text-color: #333333;
 
 	--card-size-big: 25vh;
+	--card-height-small: 30px;
 }
 
 * {
@@ -20,13 +22,28 @@
 	margin: 0;
 }
 .container {
+	margin: 0 auto;
 	width: 100vw;
-	height: 100vh;
+	height: 90vh;
+	max-width: 960px;
 	background-color: var(--bg-big-screen);
 }
+h1 {
+	text-align: center;
+	font-weight: 100;
+	font-size: 40px;
+}
+h3 {
+	text-align: center;
+	padding: 5px;
+	font-size: 15px;
+	font-weight: 100;
+}
 .tools {
-	float: right;
+	float: left;
 	width: var(--card-size-big);
+	max-width: 190px;
+	clear: right;
 }
 .grid-container {
 	display: grid;
@@ -63,9 +80,72 @@
 	background-color: var(--btn-bg);
 	color: var(--color-white);
 	box-shadow: 0px 3px 2px 0px var(--btn-shadow);
+	text-transform: uppercase;
 }
 .btn:active {
 	background-color: var(--btn-pressed-bg);
 }
+.btn-small {
+	float: left;
+	margin: 0 10px 10px 10px;
+	width: 120px;
+	height: 30px;
+	font-size: 12px;
+}
+.tools-small {
+	display: none;
+}
 @media only screen and (max-width: 375px) {
+	body {
+		background-color: var(--bg-small-screen);
+		padding: 5px;
+	}
+	h1 {
+		padding-top: 10px;
+		padding-bottom: 5px;
+		color: var(--bg-big-screen);
+		font-size: 15px;
+	}
+	h3 {
+		padding: 5px;
+		font-size: 12px;
+	}
+	.container {
+		padding: 5px;
+		width: 355px;
+		background-color: var(--color-white);
+	}
+	.grid-container {
+		width: 100%;
+		grid-auto-rows: var(--card-height-small);
+		grid-template-columns: 1fr;
+	}
+	.card {
+		margin-bottom: 3px;
+		text-align: center;
+		line-height: var(--card-height-small);
+		vertical-align: middle;
+		font-size: 12px;
+		color: var(--color-black);
+		background-color: var(--tile-bg-small);
+		border: none;
+		border-left: 5px solid var(--tile-bg);
+	}
+	.card-dark {
+		border-left: 5px solid var(--tile-bg-dark);
+	}
+	.card-light {
+		border-left: 5px solid var(--tile-bg-light);
+	}
+	.card-gray {
+		border-left: 5px solid var(--tile-bg-gray);
+	}
+	.tools {
+		display: none;
+	}
+	.tools-small {
+		display: block;
+		margin: 0 auto 20px auto;
+		width: 280px;
+	}
 }
