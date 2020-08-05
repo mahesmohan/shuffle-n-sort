@@ -9,20 +9,20 @@
 	</head>
 	<body onload="gridTools.init()">
 		<div class="container">
-			<div class="grid-container">
-				<div class="card card-light">1</div>
-				<div class="card">2</div>
-				<div class="card card-dark">3</div>
-				<div class="card">4</div>
-				<div class="card card-dark">5</div>
-				<div class="card card-gray">6</div>
-				<div class="card card-gray">7</div>
-				<div class="card card-light">8</div>
-				<div class="card card-dark">9</div>
-			</div>
+			<div class="grid-container" id="grid"></div>
 			<div class="tools">
-				<input type="button" value="Shuffle" class="btn" />
-				<input type="button" value="Sort" class="btn" />
+				<input
+					type="button"
+					value="Shuffle"
+					class="btn"
+					onclick="gridTools.shuffle()"
+				/>
+				<input
+					type="button"
+					value="Sort"
+					class="btn"
+					onclick="gridTools.sortCards()"
+				/>
 			</div>
 		</div>
 	</body>

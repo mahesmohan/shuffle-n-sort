@@ -11,7 +11,7 @@
 	--btn-pressed-bg: var(--tile-bg-light);
 	--text-color: #333333;
 
-	--card-size-big: 25vw;
+	--card-size-big: 25vh;
 }
 
 * {
