@@ -12,7 +12,7 @@
 	--btn-shadow: var(--tile-bg-dark);
 	--btn-pressed-bg: var(--tile-bg-light);
 
-	--card-size-big: 25vh;
+	--card-size-big: 25vw;
 	--card-height-small: 30px;
 }
 
@@ -21,11 +21,13 @@
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0;
 }
+body {
+	display: block;
+}
 .container {
 	margin: 0 auto;
 	width: 100vw;
 	height: 90vh;
-	max-width: 960px;
 	background-color: var(--bg-big-screen);
 }
 h1 {
@@ -41,8 +43,7 @@ h3 {
 }
 .tools {
 	float: left;
-	width: var(--card-size-big);
-	max-width: 190px;
+	max-width: 220px;
 	clear: right;
 }
 .grid-container {
@@ -72,10 +73,11 @@ h3 {
 }
 .btn {
 	margin: 10px;
-	width: 180px;
+	width: 210px;
 	height: 50px;
 	border: 0px;
 	outline: none;
+	float: left;
 	border-radius: 5px;
 	background-color: var(--btn-bg);
 	color: var(--color-white);
